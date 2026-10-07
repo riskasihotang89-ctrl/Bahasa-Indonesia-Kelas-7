@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jelajah Dunia Pantun - Media Pembelajaran Bahasa Indonesia Class 7</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <!-- Header & Navigation -->
+    <header class="app-header">
+        <div class="logo-container">
+            <span class="logo-icon">✨</span>
+            <span class="logo-text">Jelajah Pantun</span>
+        </div>
+        <nav class="app-nav">
+            <button class="nav-btn active" onclick="switchTab('beranda')">🏠 Beranda</button>
+            <button class="nav-btn" onclick="switchTab('materi')">📚 Materi</button>
+            <button class="nav-btn" onclick="switchTab('amati')">🔎 Ayo Amati</button>
+            <button class="nav-btn" onclick="switchTab('game')">🎮 Game</button>
+            <button class="nav-btn" onclick="switchTab('buat')">✍️ Buat Pantun</button>
+            <button class="nav-btn" onclick="switchTab('kuis')">📝 Kuis</button>
+            <button class="nav-btn" onclick="switchTab('hasil')">🏆 Hasil</button>
+            <button class="nav-btn" onclick="switchTab('refleksi')">💭 Refleksi</button>
+        </nav>
+    </header>
+
+    <main class="main-content">
+
+        <!-- 1. BERANDA -->
+        <section id="beranda" class="tab-content active">
+            <div class="hero-card">
+                <div class="hero-text">
+                    <span class="badge">Bahasa Indonesia • Kelas 7 SMP</span>
+                    <h1>Jelajah Dunia Pantun</h1>
+                    <p>Mari belajar memahami, mengapresiasi, dan membuat pantun dengan cara yang seru dan interaktif!</p>
+                    
+                    <form id="user-form" onsubmit="mulaiBelajar(event)" class="user-input-box">
+                        <div class="input-group">
+                            <label for="input-nama">Nama Lengkap</label>
+                            <input type="text" id="input-nama" placeholder="Masukkan nama kamu..." required>
+                        </div>
+                        <div class="input-group">
+                            <label for="input-kelas">Kelas</label>
+                            <input type="text" id="input-kelas" placeholder="Contoh: 7-A" required>
+                        </div>
+                        <button type="submit" class="btn-primary">🚀 Mulai Belajar</button>
+                    </form>
+                </div>
+                <div class="hero-illustration">
+                    <div class="illustration-circle">📖✨</div>
+                </div>
+            </div>
+
+            <!-- TUJUAN PEMBELAJARAN -->
+            <div class="card section-spacing">
+                <h2>🎯 Tujuan Pembelajaran</h2>
+                <div class="grid-2">
+                    <div class="info-box">
+                        <span class="info-num">1</span>
+                        <p>Menjelaskan pengertian dan ciri-ciri pantun secara rinci.</p>
+                    </div>
+                    <div class="info-box">
+                        <span class="info-num">2</span>
+                        <p>Membedakan bagian sampiran dan isi serta menentukan pola rima a-b-a-b.</p>
+                    </div>
+                    <div class="info-box">
+                        <span class="info-num">3</span>
+                        <p>Menemukan pesan moral yang tersirat dalam isi pantun.</p>
+                    </div>
+                    <div class="info-box">
+                        <span class="info-num">4</span>
+                        <p>Menyusun dan mengkreasi pantun karya sendiri secara mandiri.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 2. MATERI -->
+        <section id="materi" class="tab-content">
+            <div class="section-header">
+                <h2>📚 Ringkasan Materi Pantun</h2>
+                <p>Pelajari konsep dasar puisi rakyat jenis pantun berikut ini.</p>
+            </div>
+
+            <div class="grid-2">
+                <div class="card">
+                    <h3>💡 Apa itu Pantun?</h3>
+                    <p>Pantun adalah bentuk puisi rakyat Melayu yang terikat oleh aturan-aturan tertentu. Dahulu, pantun digunakan sebagai media menyampaikan nasihat, hiburan, dan sindiran secara halus.</p>
+                </div>
+                <div class="card">
+                    <h3>📌 Ciri-Ciri Utama Pantun</h3>
+                    <ul class="styled-list">
+                        <li>Satu bait terdiri atas <strong>4 baris</strong>.</li>
+                        <li>Tiap baris terdiri atas <strong>8–12 suku kata</strong>.</li>
+                        <li>Baris 1 dan 2 adalah <strong>Sampiran</strong>.</li>
+                        <li>Baris 3 dan 4 adalah <strong>Isi</strong>.</li>
+                        <li>Memiliki pola rima akhir <strong>a-b-a-b</strong>.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="card section-spacing">
+                <h3>🔍 Anatomi & Structure Pantun</h3>
+                <div class="pantun-anatomy">
+                    <div class="pantun-line sampiran">
+                        <span>Baris 1: Pohon jati tumbuh di bukit (a)</span>
+                        <span class="tag">Sampiran</span>
+                    </div>
+                    <div class="pantun-line sampiran">
+                        <span>Baris 2: Tempat berteduh si burung elang (b)</span>
+                        <span class="tag">Sampiran</span>
+                    </div>
+                    <div class="pantun-line isi">
+                        <span>Baris 3: Belajarlah walau sedikit (a)</span>
+                        <span class="tag">Isi</span>
+                    </div>
+                    <div class="pantun-line isi">
+                        <span>Baris 4: Agar ilmu makin berkembang (b)</span>
+                        <span class="tag">Isi</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="grid-2 section-spacing">
+                <div class="card">
+                    <h3>🎨 Jenis-Jenis Pantun</h3>
+                    <ul>
+                        <li><strong>Pantun Nasihat:</strong> Berisi ajakan atau ajaran moral.</li>
+                        <li><strong>Pantun Jenaka:</strong> Berisi humor dan hiburan.</li>
+                        <li><strong>Pantun Teka-Teki:</strong> Berisi tebakan yang perlu dijawab.</li>
+                        <li><strong>Pantun Muda/Mudi:</strong> Berisi perkenalan atau perasaan.</li>
+                    </ul>
+                </div>
+                <div class="card">
+                    <h3>🎯 Cara Menentukan Pesan Moral</h3>
+                    <ol class="styled-list">
+                        <li>Fokuskan perhatian hanya pada <strong>baris ke-3 dan ke-4 (Isi)</strong>.</li>
+                        <li>Abaikan makna visual pada baris sampiran.</li>
+                        <li>Cari kata kunci utama yang berisi imbauan, larangan, atau nasihat.</li>
+                    </ol>
+                </div>
+            </div>
+        </section>
+
+        <!-- 3. AYO AMATI -->
+        <section id="amati" class="tab-content">
+            <div class="section-header">
+                <h2>🔎 Ayo Amati Pantun!</h2>
+                <p>Klik tombol interaktif di bawah pantun untuk membedakan komponennya.</p>
+            </div>
+
+            <div class="card">
+                <div class="pantun-box" id="amati-box">
+                    <p id="line1" class="p-line">Jalan-jalan ke kota Blitar,</p>
+                    <p id="line2" class="p-line">Jangan lupa membeli sukun.</p>
+                    <p id="line3" class="p-line">Jika kamu ingin pintar,</p>
+                    <p id="line4" class="p-line">Belajarlah dengan tekun.</p>
+                </div>
+
+                <div class="interactive-controls">
+                    <button class="btn-secondary" onclick="sorotStruktur()">Highlight Sampiran & Isi</button>
+                    <button class="btn-secondary" onclick="sorotRima()">Highlight Rima (a-b-a-b)</button>
+                    <button class="btn-secondary" onclick="resetAmati()">Reset Tampilan</button>
+                </div>
+
+                <div id="amati-feedback" class="feedback-box">
+                    Klik tombol di atas untuk menganalisis bagian-bagian pantun ini!
+                </div>
+            </div>
+        </section>
+
+        <!-- 4. GAME -->
+        <section id="game" class="tab-content">
+            <div class="section-header">
+                <h2>🎮 Arena Permainan Pantun</h2>
+            </div>
+
+            <!-- Sub Game 1 -->
+            <div class="card">
+                <h3>Game 1: Tebak Pesan Moral</h3>
+                <div class="pantun-box">
+                    <p>Ke pasar membeli kain kasa,</p>
+                    <p>Baju dipakai terasa nyaman.</p>
+                    <p>Hormatilah orang tua setiap masa,</p>
+                    <p>Agar hidupmu penuh keberkahan.</p>
+                </div>
+                <p><strong>Apa pesan moral dari pantun di atas?</strong></p>
+                <div class="options-grid">
+                    <button class="option-btn" onclick="jawabTebakMoral(false)">Membeli kain kasa di pasar sangat nyaman</button>
+                    <button class="option-btn" onclick="jawabTebakMoral(true)">Kita wajib menghormati orang tua agar hidup berkah</button>
+                    <button class="option-btn" onclick="jawabTebakMoral(false)">Memakai baju baru membuat hidup berkah</button>
+                    <button class="option-btn" onclick="jawabTebakMoral(false)">Pasar adalah tempat membeli kain yang nyaman</button>
+                </div>
+                <div id="feedback-game1" class="feedback-box hidden"></div>
+            </div>
+
+            <!-- Sub Game 2 -->
+            <div class="card section-spacing">
+                <h3>Game 2: Susun Acak Baris Pantun</h3>
+                <p>Klik baris di bawah ini secara berurutan sesuai aturan pantun (Sampiran dulu, lalu Isi):</p>
+                
+                <div id="drag-container" class="drag-container">
+                    <!-- Dynamic Javascript Buttons -->
+                </div>
+                <div class="user-arranged-box">
+                    <h4>Susunan Kamu:</h4>
+                    <div id="arranged-result" class="arranged-result"></div>
+                    <button class="btn-primary" style="margin-top:10px;" onclick="cekSusunanPantun()">Periksa Susunan</button>
+                    <button class="btn-secondary" style="margin-top:10px;" onclick="resetSusunPantun()">Reset</button>
+                </div>
+                <div id="feedback-game2" class="feedback-box hidden"></div>
+            </div>
+        </section>
+
+        <!-- 5. TANTANGAN MEMBUAT PANTUN -->
+        <section id="buat" class="tab-content">
+            <div class="section-header">
+                <h2>✍️ Tantangan Kreasi Pantun</h2>
+                <p>Tuliskan pantun buatanmu sendiri mengikuti kaidah yang tepat!</p>
+            </div>
+
+            <div class="card">
+                <form id="pantun-builder-form" onsubmit="periksaPantunSiswa(event)">
+                    <div class="form-group">
+                        <label for="baris1">Baris 1 (Sampiran):</label>
+                        <input type="text" id="baris1" placeholder="Contoh: Pergi ke toko membeli pita" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="baris2">Baris 2 (Sampiran):</label>
+                        <input type="text" id="baris2" placeholder="Contoh: Pita merah hadiah teman" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="baris3">Baris 3 (Isi):</label>
+                        <input type="text" id="baris3" placeholder="Contoh: Jangan ragu meraih cita" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="baris4">Baris 4 (Isi):</label>
+                        <input type="text" id="baris4" placeholder="Contoh: Masa depan terang di tangan" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="pesan-moral-input">Pesan Moral Pantunmu:</label>
+                        <textarea id="pesan-moral-input" rows="2" placeholder="Tuliskan nilai nasihat yang terkandung..." required></textarea>
+                    </div>
+                    <button type="submit" class="btn-primary">🔍 Periksa Pantunku</button>
+                </form>
+
+                <div id="pantun-validation-result" class="feedback-box hidden"></div>
+            </div>
+        </section>
+
+        <!-- 6. KUIS -->
+        <section id="kuis" class="tab-content">
+            <div class="section-header">
+                <h2>📝 Kuis Evaluasi Pantun</h2>
+                <p>Jawab 10 pertanyaan pilihan ganda untuk menguji pemahamanmu.</p>
+            </div>
+
+            <div class="card">
+                <div class="quiz-header-status">
+                    <span id="quiz-progress">Soal 1 dari 10</span>
+                    <span id="quiz-score-live">Skor Sementara: 0</span>
+                </div>
+
+                <div id="quiz-container">
+                    <h3 id="quiz-question">Pertanyaan Kuis...</h3>
+                    <div id="quiz-options" class="options-grid"></div>
+                </div>
+
+                <div id="quiz-feedback" class="feedback-box hidden"></div>
+
+                <div class="quiz-footer">
+                    <button id="next-quiz-btn" class="btn-primary hidden" onclick="lanjutSoal()">Soal Berikutnya ➡️</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- 7. HASIL BELAJAR -->
+        <section id="hasil" class="tab-content">
+            <div class="section-header">
+                <h2>🏆 Laporan Hasil Belajar</h2>
+            </div>
+
+            <div class="card result-card">
+                <div class="badge-category" id="res-category">Sangat Baik</div>
+                <h3 id="res-nama">Nama Siswa</h3>
+                <p id="res-kelas">Kelas: -</p>
+                
+                <div class="score-grid">
+                    <div class="score-item">
+                        <span class="score-title">Nilai Akhir</span>
+                        <span class="score-val" id="res-score">0</span>
+                    </div>
+                    <div class="score-item">
+                        <span class="score-title">Benar</span>
+                        <span class="score-val text-green" id="res-correct">0</span>
+                    </div>
+                    <div class="score-item">
+                        <span class="score-title">Salah</span>
+                        <span class="score-val text-red" id="res-wrong">0</span>
+                    </div>
+                </div>
+
+                <div class="preview-user-pantun">
+                    <h4>Pantun Karya Kamu:</h4>
+                    <div class="pantun-preview-box" id="res-pantun-box">
+                        Belum membuat pantun. Silakan buat di menu <strong>✍️ Buat Pantun</strong>.
+                    </div>
+                    <p><strong>Pesan Moral:</strong> <span id="res-moral-box">-</span></p>
+                </div>
+            </div>
+        </section>
+
+        <!-- 8. REFLEKSI & SIMPAN -->
+        <section id="refleksi" class="tab-content">
+            <div class="section-header">
+                <h2>💭 Refleksi Belajar & Kirim Hasil</h2>
+                <p>Renungkan pembelajaran yang telah kamu lalui dan kirimkan hasilnya kepada gurumu.</p>
+            </div>
+
+            <div class="card">
+                <form id="refleksi-form" onsubmit="kirimDataKeGoogle(event)">
+                    <div class="form-group">
+                        <label>1. Apa saja yang sudah kamu pahami tentang pantun?</label>
+                        <textarea id="ref1" rows="2" required></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label>2. Bagian mana yang paling mudah kamu pahami?</label>
+                        <textarea id="ref2" rows="2" required></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label>3. Bagian mana yang masih terasa sulit?</label>
+                        <textarea id="ref3" rows="2" required></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label>4. Apa pesan moral pantun yang akan kamu terapkan dalam kehidupan sehari-hari?</label>
+                        <textarea id="ref4" rows="2" required></textarea>
+                    </div>
+
+                    <button type="submit" class="btn-primary btn-large" id="submit-btn">📤 Kirim Hasil Belajar Ke Guru</button>
+                </form>
+                <div id="submit-status" class="feedback-box hidden"></div>
+            </div>
+        </section>
+
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
